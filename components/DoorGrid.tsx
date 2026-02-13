@@ -1,7 +1,7 @@
 
 import React from 'react';
-import Door from './Door';
-import { MAIN_DOORS, FINAL_DOOR_ID } from '../constants';
+import Door from './Door.tsx';
+import { MAIN_DOORS, FINAL_DOOR_ID } from '../constants.ts';
 
 interface DoorGridProps {
   visitedDoors: string[];
@@ -17,7 +17,7 @@ const DoorGrid: React.FC<DoorGridProps> = ({ visitedDoors, isFinalUnlocked, onDo
           key={door.id} 
           id={door.id} 
           isVisited={visitedDoors.includes(door.id)}
-          isDisabled={false} // Main doors always selectable unless visited
+          isDisabled={false}
           onClick={onDoorClick}
         />
       ))}

@@ -7,6 +7,8 @@
     <title>Natalie's Dream Quest</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Babel for on-the-fly transpilation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <style>
         @keyframes float {
             0%, 100% { transform: translateY(0px) rotate(0deg); }
@@ -35,5 +37,7 @@
 </head>
 <body class="bg-slate-900 main-font text-white overflow-x-hidden min-h-screen">
     <div id="root"></div>
+    <!-- Load the entry point with Babel transpilation -->
+    <script type="text/babel" data-presets="react,typescript" data-type="module" src="./index.tsx"></script>
 </body>
 </html>

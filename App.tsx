@@ -1,10 +1,10 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
-import { ViewState, QuestState } from './types';
-import { MAIN_DOORS, FINAL_DOOR_ID } from './constants';
-import NarrativeCloud from './components/NarrativeCloud';
-import DoorGrid from './components/DoorGrid';
-import DoorScene from './components/DoorScene';
+import { ViewState, QuestState } from './types.ts';
+import { MAIN_DOORS, FINAL_DOOR_ID } from './constants.ts';
+import NarrativeCloud from './components/NarrativeCloud.tsx';
+import DoorGrid from './components/DoorGrid.tsx';
+import DoorScene from './components/DoorScene.tsx';
 
 const STORAGE_KEY = 'natalie_quest_progress';
 
@@ -54,15 +54,12 @@ const App: React.FC = () => {
       return "bg-gradient-to-b from-green-950 via-emerald-900 to-amber-950";
     }
     if (activeDoor === '2') {
-      // Saturated reds and browns for the Market/Tent theme
       return "bg-gradient-to-b from-red-950 via-red-900 to-amber-950";
     }
     if (activeDoor === '3') {
-      // Midnight Palace theme for Door 3
       return "bg-gradient-to-b from-slate-900 via-indigo-950 to-slate-900";
     }
     if (activeDoor === '4') {
-      // Azure Sea theme for Door 4
       return "bg-gradient-to-b from-cyan-900 via-teal-800 to-blue-950";
     }
     return "bg-gradient-to-b from-indigo-900 via-purple-900 to-slate-900";
